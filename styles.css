@@ -1,0 +1,34 @@
+/* 1. Typography System (assuming you linked a Google Font) */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Flexbox Navigation (Mobile-first: vertical stack) */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+/* 3. CSS Grid Photo Gallery (1 column on mobile) */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* 4. Responsive Design (Desktop adjustments) */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row; /* Horizontal on desktop */
+    justify-content: space-around;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  }
+}
